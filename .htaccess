@@ -14,6 +14,16 @@ RewriteEngine On
 
 
 
+# If the URI maps to a file, then do nothing
+# RewriteCond "%{DOCUMENT_ROOT}%{REQUEST_URI}" -f
+# RewriteRule . - [QSA,NC,L]
+
+## -/-/-/-/-/-/
+## ~ CUSTOMERS
+## -/-/-/-/-/-/
+# Add a customer
+RewriteCond "%{REQUEST_METHOD}" GET
+RewriteRule ^/?customers/add/?$ customers/add/index.php [QSA,NC,L]
 
 
 
