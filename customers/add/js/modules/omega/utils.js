@@ -56,8 +56,8 @@ utils.getErrorResponse = getErrorResponse;
 function getRole ( roleId ) {
 
 	var apiEndpoint = __OMEGA.settings.apiEndpoint;
-	// var url = apiEndpoint + "/salespeople/roles" + "/" + roleId;
-	var url = "http://omega.capi/salespeople/roles" + "/" + roleId;
+	var url = apiEndpoint + "/salespeople/roles" + "/" + roleId;
+	// var url = "http://omega.capi/salespeople/roles" + "/" + roleId;
 
 	var ajaxRequest = $.ajax( {
 		url: url,
@@ -130,8 +130,8 @@ utils.getProfile = getProfile;
 function getProjects () {
 
 	var apiEndpoint = __OMEGA.settings.apiEndpoint;
-	// var url = apiEndpoint + "/projects";
-	var url = "http://omega.capi/projects";
+	var url = apiEndpoint + "/projects";
+	// var url = "http://omega.capi/projects";
 
 	var ajaxRequest = $.ajax( {
 		url: url,
@@ -167,8 +167,8 @@ utils.getProjects = getProjects;
 function getCustomerSources () {
 
 	var apiEndpoint = __OMEGA.settings.apiEndpoint;
-	// var url = apiEndpoint + "/customers/sources";
-	var url = "http://omega.capi/customers/sources";
+	var url = apiEndpoint + "/customers/sources";
+	// var url = "http://omega.capi/customers/sources";
 
 	var ajaxRequest = $.ajax( {
 		url: url,
