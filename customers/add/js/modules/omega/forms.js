@@ -146,8 +146,12 @@ $( document ).on( "submit", ".js_customer_form", async function ( event ) {
 	}
 	catch ( e ) {
 		console.log( e );
-		if ( e.code == -1 )
-			$feedbackMessage.text( `Could not determine if the customer already exists on the CRM. Please contact Sahith.` );
+		if ( e.code == -1 ) {
+			$feedbackMessage.text( `Could not determine if the customer already exists on the CRM. Please try again after a few minutes.
+				<br>
+				If this issue persists, please contact Sahith.` );
+			return;
+		}
 		else
 			$feedbackMessage.text( e.message );
 	}
