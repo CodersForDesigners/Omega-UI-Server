@@ -1,3 +1,14 @@
+<?php
+
+/*
+ *
+ * Get client-specific data
+ *
+ */
+$omega = json_decode( file_get_contents( __DIR__ . '/../../__environment/configuration/omega.json' ), true );
+$apiEndpoint = $omega[ 'apiEndpoint' ];
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -31,7 +42,7 @@
 
 
 				// API endpoint
-			settings.apiEndpoint = "https://api.omega.seyonii.com";
+			settings.apiEndpoint = "<?php echo $apiEndpoint ?>";
 
 
 			__OMEGA.settings = settings;
