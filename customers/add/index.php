@@ -203,7 +203,7 @@
 		// Set the customer's source based on the backend user's profile and role
 		var sources = [ "Self Generated" ];
 		if ( roleName == "PSA" )
-			sources = sources.concat( [ "Phone", "Channel Partner", "Customer Referral" ] );
+			sources = sources.concat( [ "Phone", "Channel Partner", "Customer Referral", "Chat" ] );
 		if ( roleName.includes( "RM" ) )
 			sources = sources.concat( [ "Walk-in at Site", "Customer Referral" ] );
 		if ( roleName.includes( "Team" ) )
